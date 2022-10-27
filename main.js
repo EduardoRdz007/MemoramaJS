@@ -48,6 +48,7 @@ function girar(id){
     let card1 = document.getElementById(id);   
     primeraEleccion = numeros[id]; 
     card1.innerHTML = `<img src="./images/${primeraEleccion}.png" alt="">`;  // ----------------------------------IMG
+    clickAudio.play();
     card1.disabled = true;
     cartasDestapadas++;
 
@@ -66,6 +67,9 @@ function girar(id){
     
     segundoId = id;
 
+
+    movimientos++;
+    mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
 
     if(primeraEleccion == segundaEleccion){
       cartasDestapadas = 0;
