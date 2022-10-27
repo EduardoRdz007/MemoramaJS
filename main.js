@@ -74,6 +74,9 @@ function girar(id){
     if(primeraEleccion == segundaEleccion){
       cartasDestapadas = 0;
       pares++;
+      puntaje++;
+      mostrarPuntaje.innerHTML = `Puntaje: ${puntaje}`;
+      rightAudio.play(); //Audio insertado
     }else{
       wrongAudio.play(); //Audio insertado
       setTimeout(()=>{
